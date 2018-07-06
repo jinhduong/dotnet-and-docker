@@ -13,5 +13,6 @@ RUN dotnet publish -c Release -o out
 FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT [ "dotnet","dotnet_demo_webapi.dll" ]
+# ENTRYPOINT [ "dotnet","dotnet_demo_webapi.dll" ]
+CMD [ "dotnet","dotnet_demo_webapi.dll" ]
 
